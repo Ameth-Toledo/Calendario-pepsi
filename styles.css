@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.calendar-container {
+    width: 90%;
+    max-width: 900px;
+}
+
+.month {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.month-header {
+    font-size: 24px;
+    .month:hover {
+        transform: scale(1.02);
+    }
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #ff7f50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 12px;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.day:hover {
+    background: #ff7f50;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.event {
+    font-size: 12px;
+    color: gray;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .calendar-grid, .calendar-days {
+        grid-template-columns: repeat(7, 1fr); /* Se mantiene en 7 columnas */
+    }
+
+    .month-header {
+        font-size: 20px;
+    }
+
+    .day {
+        font-size: 8px;
+        min-height: 55px;
+    }
+
+    .event {
+        font-size: 10px;
+    }
+}
+
