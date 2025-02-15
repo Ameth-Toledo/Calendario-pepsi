@@ -45,7 +45,18 @@ for (let mes = 1; mes <= 12; mes++) {
         let dayDiv = document.createElement("div");
         dayDiv.classList.add("day");
         let currentDay = new Date(2025, mes - 1, day).getDay();
-        dayDiv.innerHTML = `${day}<div class="event">${nombres[currentDay]}</div>`;
+        let eventName = "nadie";
+
+        if (mes === 2 && day === 14) eventName = "nadie";  
+        else if (mes === 2 && day === 15) eventName = "nadie"; 
+        else if (mes === 2 && day === 16) eventName = "nadie"; 
+        else if (mes === 2 && day === 17) eventName = "Mampo"; 
+        else if (mes === 2 && day === 18) eventName = "Analista"; 
+        else if (mes === 2 && day === 19) eventName = "Chochi"; 
+        else if (mes === 2 && day === 20) eventName = "Inge"; 
+        else eventName = nombres[currentDay]; 
+
+        dayDiv.innerHTML = `${day}<div class="event">${eventName}</div>`;
         gridDiv.appendChild(dayDiv);
     }
 
