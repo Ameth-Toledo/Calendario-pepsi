@@ -1,4 +1,4 @@
-const nombres = ["nadie", "nadie", "nadie", "Mampo", "Analista", "Chochi", "Inge"];
+const nombres = ["nadie", "Mampo", "Analista", "Chochi", "Inge", "nadie", "nadie"];
 const meses = [
     "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
@@ -45,16 +45,9 @@ for (let mes = 1; mes <= 12; mes++) {
         let dayDiv = document.createElement("div");
         dayDiv.classList.add("day");
         let currentDay = new Date(2025, mes - 1, day).getDay();
-        let eventName = "nadie";
-
-        if (mes === 2 && day === 14) eventName = "nadie";  
-        else if (mes === 2 && day === 15) eventName = "nadie"; 
-        else if (mes === 2 && day === 16) eventName = "nadie"; 
-        else if (mes === 2 && day === 17) eventName = "Mampo"; 
-        else if (mes === 2 && day === 18) eventName = "Analista"; 
-        else if (mes === 2 && day === 19) eventName = "Chochi"; 
-        else if (mes === 2 && day === 20) eventName = "Inge"; 
-        else eventName = nombres[currentDay]; 
+        
+        // Asignar nombre según el día de la semana (0=Dom, 1=Lun, 2=Mar, etc.)
+        let eventName = nombres[currentDay];
 
         dayDiv.innerHTML = `${day}<div class="event">${eventName}</div>`;
         gridDiv.appendChild(dayDiv);
