@@ -1,4 +1,4 @@
-const nombres = ["nadie", "nadie", "nadie", "ozuna", "jared", "fabricio", "ameth"];
+const nombres = ["nadie", "nadie", "nadie", "Mampo", "Analista", "Chochi", "Inge"];
 const meses = [
     "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
